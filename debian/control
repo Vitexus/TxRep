@@ -1,0 +1,21 @@
+Source: spamassassin-txrep
+Section: mail
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Build-Depends: debhelper (>= 7.0.50~), node-uglify
+Standards-Version: 3.9.4
+Homepage: http://jquery.com/
+Vcs-Browser: https://github.com/Vitexus/TxRep
+Vcs-Git: git://git@github.com:Vitexus/TxRep.git
+
+Package: spamassassin-txrep
+Architecture: all
+Multi-Arch: foreign
+Breaks: movabletype-opensource (<< 5.1.4+dfsg-3~)
+Depends: ${misc:Depends}, spamassassin
+Description: Reputation Plugin for SpamAssassin
+ The TxRep (Reputation) plugin is designed as an improved 
+ replacement of the AWL (Auto-Whitelist) plugin. It adjusts 
+ the final message spam score by looking up and taking in 
+ consideration the reputation of the sender.
