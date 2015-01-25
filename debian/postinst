@@ -1,0 +1,16 @@
+#!/bin/sh
+# postinst script for spamassassin-txrep
+
+set -e
+
+grep -q -F 'loadplugin   Mail::SpamAssassin::Plugin::TxRep' /etc/spamassassin/local.cf || echo 'loadplugin   Mail::SpamAssassin::Plugin::TxRep' >> /etc/spamassassin/local.cf
+
+if [ -x /usr/sbin/invoke-rc.d ]; then
+    invoke-rc.d spamassassin reload 3>/dev/null || true
+else
+    /etc/init.d/spamassassin reload 3>/dev/null || true
+fi
+
+#DEBHELPER#
+
+exit 0

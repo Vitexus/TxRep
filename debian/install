@@ -1,2 +1,2 @@
-TxRep.pm		/usr/share/perl5/Mail/SpamAssassin/Plugin/TxRep.pm
-
+TxRep.pm		/usr/share/perl5/Mail/SpamAssassin/Plugin/
+60_txreputation.cf	/etc/spamassassin

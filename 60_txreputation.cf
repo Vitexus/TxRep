@@ -1,0 +1,4 @@
+header         TXREP   eval:check_senders_reputation()
+describe       TXREP   Score normalizing based on sender's reputation
+tflags         TXREP   userconf noautolearn
+priority       TXREP   1000
